@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:background="@color/yellow">
+
+        <RelativeLayout
+            android:id="@+id/layout_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/margin_15"
+            android:paddingLeft="@dimen/margin_15">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nevigation_arrow_right"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_booking_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_details"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/font_size_18sp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/layout_header"
+        android:layout_above="@+id/layout_footer">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout">
+
+            <LinearLayout
+                android:id="@+id/layout_liniar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_booking_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/booking_id"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_booking_id_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/cSignUP"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_160"
+                    android:layout_marginTop="@dimen/margin_15">
+
+                    <TextView
+                        android:id="@+id/txt_pickup_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pickup_point"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_pickup_point_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/cSignUP"
+                        android:layout_below="@+id/txt_pickup_point"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/txt_booking_date"
+                        android:maxLines="2"
+                        android:layout_marginRight="@dimen/margin_5"/>
+
+                    <TextView
+                        android:id="@+id/txt_booking_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/cSignUP"
+                        android:layout_below="@+id/txt_pickup_point"
+                        android:layout_alignParentRight="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/seprator_color"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/to_background"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/txt_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/to"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_size_14sp"/>
+
+                    </RelativeLayout>
+                    <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/to_background_with_text"-->
+                    <!--android:layout_centerInParent="true"/>-->
+
+                    <TextView
+                        android:id="@+id/txt_drop_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drop_point"
+                        android:textColor="@color/black"
+                        android:layout_above="@+id/txt_drop_point_val"/>
+
+                    <TextView
+                        android:id="@+id/txt_drop_point_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/cSignUP"
+                        android:layout_alignParentBottom="true"
+                        android:maxLines="2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/seprator_color"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/heading_blank_btn">
+
+                        <TextView
+                            android:id="@+id/txt_vehicle_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_14sp"
+                            android:text="@string/vehicle_detail"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_driver_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/img_user_image"
+                            android:layout_width="@dimen/height_75"
+                            android:layout_height="@dimen/height_75"
+                            android:scaleType="fitXY"
+                            android:layout_centerVertical="true"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_vertical_sep"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:src="@drawable/vertical_sep"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/img_vertical_sep"
+                            android:layout_marginTop="@dimen/margin_10">
+
+                            <TextView
+                                android:id="@+id/txt_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/font_size_14sp"
+                                android:textColor="@color/cSignUP"
+                                android:layout_toRightOf="@+id/img_user_icon"
+                                android:singleLine="true"
+                                android:layout_marginLeft="@dimen/height_2"/>
+
+                            <ImageView
+                                android:id="@+id/img_user_icon"
+                                android:layout_width="@dimen/height_20"
+                                android:layout_height="@dimen/height_20"
+                                android:src="@drawable/icon_username"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_tuck_num_plate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_user_name"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_toRightOf="@+id/img_vertical_sep">
+
+                            <ImageView
+                                android:id="@+id/img_trc_icon"
+                                android:layout_width="@dimen/height_20"
+                                android:layout_height="@dimen/height_20"
+                                android:src="@drawable/icon_email"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:id="@+id/txt_user_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/cSignUP"
+                                android:layout_toRightOf="@+id/img_trc_icon"
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:textSize="@dimen/font_size_14sp"
+                                android:layout_centerVertical="true"
+                                android:singleLine="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_lic_mob_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_tuck_num_plate"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_toRightOf="@+id/img_vertical_sep">
+
+
+                            <ImageView
+                                android:id="@+id/img_mobile_icon"
+                                android:layout_width="@dimen/height_20"
+                                android:layout_height="@dimen/height_20"
+                                android:src="@drawable/icon_mobile"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:id="@+id/txt_mobile_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/cSignUP"
+                                android:layout_toRightOf="@+id/img_mobile_icon"
+                                android:layout_marginLeft="@dimen/margin_5"
+                                android:textSize="@dimen/font_size_14sp"
+                                android:layout_centerVertical="true"
+                                android:singleLine="true"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vehicle_details_section_background"
+                android:layout_below="@+id/layout_liniar"
+                android:id="@+id/imageView2" />
+            <RelativeLayout
+                android:id="@+id/layout_payment_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blank_rounded_image"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/layout_liniar"
+                android:layout_marginTop="@dimen/margin_45">
+
+                <TextView
+                    android:id="@+id/txt_payment_detial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/payment_detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_payment_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:orientation="vertical"
+                android:layout_below="@+id/layout_payment_detail"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/txt_payment_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_type"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_payment_type_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cash"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#30000000"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_distance"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:orientation="vertical"
+                android:layout_below="@+id/layout_payment_type"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/txt_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/cSignUP"/>
+                <TextView
+                    android:id="@+id/txt_distance_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txt_distance_km"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/txt_distance_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/km"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/primary_dark"
+                    android:layout_alignParentRight="true"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#30000000"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_approx_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:orientation="vertical"
+                android:layout_below="@+id/layout_distance"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/txt_approx_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apr_trv_time"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/cSignUP"/>
+
+                <TextView
+                    android:id="@+id/txt_approx_time_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#30000000"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_total_price"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:orientation="vertical"
+                android:layout_below="@+id/layout_approx_time"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/txt_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_price"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/cSignUP"/>
+
+                <TextView
+                    android:id="@+id/txt_total_price_dol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/primary_dark"
+                    android:layout_toLeftOf="@+id/txt_total_price_val"/>
+
+                <TextView
+                    android:id="@+id/txt_total_price_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#30000000"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/layout_pending"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/height_70"-->
+        <!--android:weightSum="2"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="visible">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_accept_btn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/accept_btn"-->
+        <!--android:scaleType="fitXY"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_reject_btn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/reject_button"-->
+        <!--android:scaleType="fitXY"/>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/layout_accepted"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_70"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!-- Arrived Layout Start -->
+            <RelativeLayout
+                android:id="@+id/layout_arrived"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_5">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/i_hve_arrv"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/cSignUP"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:layout_marginBottom="@dimen/margin_5"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/border_color"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <!-- Arrived Layout End-->
+            <!-- Begin Layout Start -->
+            <RelativeLayout
+                android:id="@+id/layout_begin_trip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_5">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/begin_trip"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/cSignUP"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:layout_marginBottom="@dimen/margin_5"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/border_color"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <!-- Begin Layout End -->
+            <RelativeLayout
+                android:id="@+id/layout_user_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_5">
+
+                    <ImageView
+                        android:id="@+id/image_eta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/contact_icon"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/call"
+                        android:layout_below="@+id/image_eta"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/cSignUP"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:layout_marginBottom="@dimen/margin_5"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- complete Layout Start -->
+        <RelativeLayout
+            android:id="@+id/layout_finished"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_70"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/journey_complet"
+                android:layout_centerInParent="true"
+                android:textColor="@color/cSignUP"
+                android:textSize="@dimen/font_size_16sp"/>
+        </RelativeLayout>
+        <!-- complete Layout End -->
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

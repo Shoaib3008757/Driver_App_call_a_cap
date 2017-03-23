@@ -1,0 +1,201 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/book_loading_page">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/book_loading_background"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/book_loading_background"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="165dp"
+                    android:src="@drawable/callacab"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerInside"
+                    android:id="@+id/imageView" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@android:color/holo_orange_dark">
+
+                    <TextView
+                        android:id="@+id/caption_signin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caption_signin"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_25sp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/width_30"
+                        android:layout_marginRight="@dimen/width_30"
+                        android:paddingBottom="@dimen/margin_3"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/margin_50"
+                        android:layout_marginRight="@dimen/margin_50"
+                        android:layout_below="@+id/divider_name"
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/width_25"
+                            android:layout_height="@dimen/height_25"
+                            android:src="@drawable/user_icon"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:textColorHint="@color/white">
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edt_reg_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_username"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:text=""
+                                android:imeOptions="actionNext"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_20sp"
+                                android:textColorHint="@color/white"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_1"
+                        android:background="@drawable/textbox_bottom_line"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_50"
+                        android:layout_marginRight="@dimen/margin_50"
+                        ></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_marginLeft="@dimen/margin_50"
+                        android:layout_marginRight="@dimen/margin_50"
+                        >
+                        <ImageView
+                            android:id="@+id/img_password"
+                            android:layout_width="@dimen/width_25"
+                            android:layout_height="@dimen/height_25"
+                            android:src="@drawable/password_icon"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"/>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/img_password"
+                            android:layout_marginRight="@dimen/margin_3"
+                            android:textColorHint="@color/white">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edt_reg_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:text=""
+                                android:imeOptions="actionDone"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_20sp"
+                                android:textColorHint="@color/white"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_1"
+                        android:background="@drawable/textbox_bottom_line"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_50"
+                        android:layout_marginRight="@dimen/margin_50"
+                        ></View>
+
+
+
+                    <TextView
+                        android:id="@+id/tv_signin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_45"
+                        android:text="@string/caption_signin"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_15sp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/blank_btn"
+                        android:layout_marginLeft="@dimen/width_30"
+                        android:layout_marginRight="@dimen/width_30"
+                        android:paddingBottom="@dimen/margin_3"
+                        android:layout_marginTop="@dimen/margin_20"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caption_oops_forgot_password"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_15sp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/width_30"
+                        android:layout_marginRight="@dimen/width_30"
+                        android:paddingBottom="@dimen/margin_3"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    <include layout="@layout/notify_alert"></include>
+</RelativeLayout>

@@ -1,0 +1,687 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="@dimen/margin_90">
+
+        <include
+            android:id="@+id/register_step_one"
+            layout="@layout/register_step_one"
+            android:visibility="visible"></include>
+
+        <include
+            android:id="@+id/register_step_two"
+            layout="@layout/register_step_two"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/register_step_three"
+            layout="@layout/register_step_three"
+            android:visibility="gone"></include>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_100"
+        android:layout_below="@+id/layout_header">
+
+        <!-- Layout First Start -->
+        <LinearLayout
+            android:id="@+id/layout_header_step_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/ll_personal_details_active_step_first"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_personal_step_first"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/personal_active"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caption_personal_details"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_below="@+id/img_personal_step_first"/>
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="visible">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/active_indicator_register"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_vehicle_details_inactive_step_first"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_vertical_inactive_step_first"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/vehicle"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/icon_pending_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_done"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_legal_details_inactive_step_first"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_legla_inactive_step_first"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/legal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/icon_pending_fir_thd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        android:src="@drawable/icon_done"/>
+
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/active_indicator_register"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- Layout First End -->
+
+        <!-- Layout Secound Start -->
+        <LinearLayout
+            android:id="@+id/layout_header_step_secound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/ll_vehicle_details_inactive_step_secound"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_vertical_inactive"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/personal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"/>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_personal_details_active_step_secound"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_personal_step_secound"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/vehicle_active"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caption_vehicle_details"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_below="@+id/img_personal_step_secound"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="visible">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/active_indicator_register"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_legal_details_inactive_step_secound"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_legla_inactive_step_secound"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/legal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/icon_pending_sec_thd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- Layout Secound End -->
+
+        <!-- Layout Thared Start -->
+        <LinearLayout
+            android:id="@+id/layout_header_step_thd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/ll_vehicle_details_inactive_step_thd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_vertical_inactive_step_thd"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/personal"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"/>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/ll_legal_details_inactive_step_thd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow">
+
+                    <ImageView
+                        android:id="@+id/img_legla_inactive_step_thd"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/vehicle"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"/>
+
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/active_indicator_register"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_personal_details_active_step_thd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_87"
+                    android:background="@color/yellow"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_personal_step_thd"
+                        android:layout_width="@dimen/width_40"
+                        android:layout_height="@dimen/height_40"
+                        android:src="@drawable/legal_active"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/caption_legal_details"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_below="@+id/img_personal_step_thd"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_25"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="visible">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_10"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone">
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_25"
+                        android:src="@drawable/icon_done"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/active_indicator_register"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- Layout Thared Start -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_90"
+        android:background="@color/yellow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/margin_10"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_20"
+                android:src="@drawable/prev"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_prev"
+                android:layout_marginLeft="@dimen/margin_5"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_caption_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/caption_edit_prf"
+            android:textColor="@color/cSignUP"
+            android:textSize="@dimen/font_size_25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_20"
+            />
+
+        <TextView
+            android:layout_below="@+id/tv_caption_signup"
+            android:id="@+id/tv_caption_create_your_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/caption_edit_your_account"
+            android:textColor="@color/cCreateYourAccount"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_20sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/margin_10">
+
+
+            <TextView
+                android:id="@+id/txt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp"
+                android:text="Next"
+                android:layout_marginRight="@dimen/margin_5" />
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_20"
+                android:src="@drawable/next"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_next"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/vAlert"
+        layout="@layout/notify_alert"></include>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="#95000000"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_100"
+            android:layout_marginLeft="@dimen/width_30"
+            android:layout_marginRight="@dimen/width_30">
+
+            <RelativeLayout
+                android:id="@+id/layout_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:background="@drawable/blank_btn">
+
+                <TextView
+                    android:id="@+id/tv_newuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/caption_new_user"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_15sp"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:background="@drawable/blank_btn"
+                android:layout_marginTop="@dimen/margin_15">
+
+                <TextView
+                    android:id="@+id/tv_signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/caption_signin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_15sp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

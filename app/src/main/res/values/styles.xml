@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorAccent">@color/yellow</item>
+        <item name="@android:statusBarColor">@color/yellow</item>
+        <!-- colorPrimary is used for the default action bar background -->
+
+    </style>
+
+    <style name="DatePickerThem" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorAccent">@color/yellow</item>
+        <item name="@android:statusBarColor">@color/yellow</item>
+        <item name="android:windowBackground">@color/yellow</item>
+        <!-- colorPrimary is used for the default action bar background -->
+
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:colorPrimaryDark">@color/primary_dark</item>-->
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary_dark</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="@android:statusBarColor">@color/yellow</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary_dark</item>
+        <item name="@android:statusBarColor">@color/yellow</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogSlideAnimation</item>
+    </style>
+
+    <style name="DialogSlideAnimation" >
+
+        <item name="android:windowEnterAnimation">@anim/anim_slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/anim_slide_in_left</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

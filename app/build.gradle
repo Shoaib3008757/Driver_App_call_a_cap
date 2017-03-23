@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.texi"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile project(':slideMenuLibrary')
+    compile('com.github.nkzawa:socket.io-client:0.3.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile 'com.google.android.gms:play-services-maps:9.4.0'
+    compile 'com.google.android.gms:play-services-analytics:9.4.0'
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.victor:lib:1.0.4'
+    compile 'com.afollestad.material-dialogs:core:0.8.6.2'
+    compile 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.wdullaer:materialdatetimepicker:2.4.0'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    testCompile 'junit:junit:4.12'
+}

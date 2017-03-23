@@ -1,0 +1,50 @@
+[
+    {
+        "outputFile": "E:\\Call A Cab\\taxi-booking-app_v10\\Driver App\\slideMenuLibrary\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1092,
+                    "endColumn": 42,
+                    "endOffset": 1130
+                },
+                "from": {
+                    "file": "E:\\Call A Cab\\taxi-booking-app_v10\\Driver App\\slideMenuLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1092,
+                        "endColumn": 42,
+                        "endOffset": 1130
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "D:\\shoaib's apps backup\\taxi-booking-app_v10\\Driver App\\slideMenuLibrary\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1092,
+                    "endColumn": 42,
+                    "endOffset": 1130
+                },
+                "from": {
+                    "file": "D:\\shoaib's apps backup\\taxi-booking-app_v10\\Driver App\\slideMenuLibrary\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1092,
+                        "endColumn": 42,
+                        "endOffset": 1130
+                    }
+                }
+            }
+        ]
+    }
+]

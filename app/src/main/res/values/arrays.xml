@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="cartypes">
+        <item>Hatchback</item>
+        <item>Sedans</item>
+        <item>Suv</item>
+        <item>Truck</item>
+        <item>Van</item>
+        <item>Zeep</item>
+    </string-array>
+
+</resources>

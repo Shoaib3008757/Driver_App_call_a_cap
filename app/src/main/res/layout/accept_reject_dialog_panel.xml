@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginLeft="@dimen/margin_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_timmer"
+            android:background="@drawable/redius_border">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20">
+
+                <RelativeLayout
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_centerHorizontal="true">
+
+                    <com.github.lzyzsd.circleprogress.DonutProgress
+                        android:id="@+id/timmer_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        custom:donut_progress="0"
+                        custom:donut_max="60">
+
+
+                    </com.github.lzyzsd.circleprogress.DonutProgress>
+
+                    <com.texi.utils.CustomMap
+                        android:id="@+id/mapview"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:clickable="false"
+                        android:layout_centerInParent="true">
+                    </com.texi.utils.CustomMap>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_remaining"
+                android:textSize="@dimen/font_size_20sp"
+                android:layout_gravity="center"
+                android:textColor="@color/menu_usernumber_color"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/minutes_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/font_size_16sp"
+                    android:textColor="@color/menu_usernumber_color"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginBottom="@dimen/margin_50"
+                android:minHeight="@dimen/height_50">
+
+                <TextView
+                    android:id="@+id/txt_address_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/font_size_16sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:textColor="@color/menu_usernumber_color"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_accept_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accept_reject_blank"
+                android:layout_marginRight="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/txt_accept_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_15sp"
+                    android:text="@string/accept"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_decline_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accept_reject_blank"
+                android:layout_toRightOf="@+id/layout_accept_popup"
+                android:layout_marginLeft="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/txt_decline_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_15sp"
+                    android:text="@string/decline"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/accept"-->
+            <!--android:id="@+id/pop_img_accept_btn"-->
+            <!--android:layout_marginRight="@dimen/margin_10"/>-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/decline"-->
+            <!--android:id="@+id/pop_img_decline"-->
+            <!--android:layout_toRightOf="@+id/pop_img_accept_btn"-->
+            <!--android:layout_marginLeft="@dimen/margin_10"/>-->
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

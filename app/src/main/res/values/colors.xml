@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_dark">#d52845</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="mk_error">#ff554d</color>
+    <color name="mk_info">#faad3b</color>
+    <color name="cTextBox">#d52845</color>
+    <color name="dialog_error_color">#ff554d</color>
+    <color name="cSignUP">#061324</color>
+    <color name="cCreateYourAccount">#758db0</color>
+    <color name="cTab">#444444</color>
+    <color name="yellow">#fcd633</color>
+    <color name="border_color">#e3e3e3</color>
+    <color name="menu_usernumber_color">#626262</color>
+    <color name="slide_option_menu">#323232</color>
+    <color name="slide_user_name">#262626</color>
+    <color name="slide_user_num">#626262</color>
+    <color name="detail_color">#149a40</color>
+    <color name="booking_truck_type">#8f0010</color>
+    <color name="booking_id_color">#969696</color>
+    <color name="seprator_color">#d6d6d6</color>
+    <color name="sucess_color">#2ECC71</color>
+    <color name="cGallery">#fd472b</color>
+</resources>

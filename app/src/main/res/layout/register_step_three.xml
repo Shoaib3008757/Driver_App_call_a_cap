@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/sv_personal_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:visibility="visible"
+        android:background="@drawable/background_register">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                >
+                <ImageView
+                    android:layout_width="@dimen/width_25"
+                    android:layout_height="@dimen/height_25"
+                    android:src="@drawable/license_plate"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textColorHint="@color/white">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edt_reg_driving_license"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_driving_license"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/font_size_20sp"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/white"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1"
+                android:background="@drawable/textbox_bg"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                ></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                >
+                <ImageView
+                    android:layout_width="@dimen/width_25"
+                    android:layout_height="@dimen/height_25"
+                    android:src="@drawable/license_plate"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textColorHint="@color/white">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edt_reg_license_exp_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_license_exp_date"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/font_size_20sp"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/white"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1"
+                android:background="@drawable/textbox_bg"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                ></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                >
+                <ImageView
+                    android:layout_width="@dimen/width_25"
+                    android:layout_height="@dimen/height_25"
+                    android:src="@drawable/license_plate"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textColorHint="@color/white">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edt_reg_license_plate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_license_plate"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/font_size_20sp"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/white"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1"
+                android:background="@drawable/textbox_bg"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                ></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                >
+                <ImageView
+                    android:layout_width="@dimen/width_25"
+                    android:layout_height="@dimen/height_25"
+                    android:src="@drawable/insuarance_icon"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textColorHint="@color/white">
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edt_reg_insuarance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_insuarance"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:imeOptions="actionDone"
+                        android:background="@android:color/transparent"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/font_size_20sp"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/white"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1"
+                android:background="@drawable/textbox_bg"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                ></View>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_signin_register"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_45"
+        android:text="@string/caption_signup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_15sp"
+        android:gravity="center"
+        android:background="@drawable/blank_btn"
+        android:layout_marginBottom="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
